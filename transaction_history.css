@@ -1,0 +1,338 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, Medium, sans-serif;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 90%;
+    margin: 50px auto;
+
+  }
+  table, th, td {
+    border: 2px solid black;
+    padding: 5px
+  }
+
+th {
+    font-size: 30px;
+    font-weight: 700;
+    font-family: Arial; 
+}
+
+td {
+    font-size: 25px;
+    font-weight: 400;
+    font-family: Georgia;
+    color: crimson;
+}
+
+  main {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .btn {
+    background: #394a6d;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  
+  /*=====SIDE NAV STYLES=====*/
+  main .side_bar {
+    background: #52de97;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  main ul.side_nav {
+    list-style: none;
+    text-align: center;
+    margin-top: 4rem;
+  }
+  
+  main ul.side_nav li {
+    margin-bottom: 4rem;
+    transition: background-color 0.3s;
+    padding: 0.6rem 1rem;
+  }
+  
+  main ul.side_nav li:hover {
+    background: #92e5bb;
+  }
+  
+  main ul.side_nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  main ul.side_nav a i {
+    margin-right: 0.3rem;
+  }
+  
+  main .side_bar .sidebar_btn {
+    align-self: center;
+  }
+  
+  /*=====MAIN DASHBOARD STYLES=====*/
+  section.dashboard {
+    width: 100%;
+  }
+  
+  section.dashboard header {
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  section.dashboard .header_nav {
+    margin-top: 3rem;
+    display: flex;
+    height: 60px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  section.dashboard .header_nav .btn {
+    box-shadow: 0 3px 12px #00000029;
+    color: white;
+    display: flex;
+    align-items: center;
+  }
+  
+  section.dashboard .header_nav .btn i {
+    margin-right: 0.3rem;
+  }
+  
+  section.dashboard .header_nav h1 {
+    font-weight: 500;
+  }
+  
+  /*User Details Styles*/
+  .user_details {
+    width: 25%;
+  }
+  
+  .user_details p:first-child {
+    color: #52de97;
+    font-size: 1.1rem;
+  }
+  
+  .user_details p.amount {
+    color: #394a6d;
+    font-size: 2rem;
+  }
+  
+  .amount {
+    font-size: 1.5rem;
+  }
+  /*===response styles====*/
+  p.response {
+    color: white;
+    text-align: center;
+    background: #52de97;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    padding: 0.3rem 1rem;
+    align-self: center;
+    border-radius: 3px;
+  }
+  
+  p.response i {
+    cursor: pointer;
+  }
+  
+  /*=====DASHBOARD CARDS STYLES=====*/
+  section.dashboard {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  section.dashboard .dashboard_cards {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 4rem;
+  }
+  
+  .dashboard_cards .square_cards {
+    display: flex;
+    margin-bottom: 1rem;
+  }
+  
+  .square_cards .card_square {
+    flex: 1;
+  
+    height: 20vh;
+    color: white;
+    background: #3c9d9b;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .dashboard_cards .card_square:nth-child(2) {
+    background: #92e5bb;
+    margin-left: 1rem;
+  }
+  
+  .dashboard_cards .card_rect {
+    background: #394a6d;
+    color: white;
+    border-radius: 3px;
+    text-align: center;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  :root {
+    --mainWhite: #f5f5f5f5;
+    --mainDark: #333333;
+    --mainGreen: #317b22;
+    --mainRed: #b80c09;
+    --mainBlue: #05668d;
+  }
+  
+  body {
+    background: var(--mainWhite);
+    color: var(--mainDark);
+  }
+  .budget-feedback,
+  .expense-feedback {
+    display: none;
+  }
+  
+  .budget-form {
+    border: 0.15rem solid var(--mainGreen);
+    padding: 1rem;
+    border-radius: 0.25rem;
+  }
+  .expense-form {
+    border: 0.15rem solid var(--mainRed);
+    padding: 1rem;
+    border-radius: 0.25rem;
+  }
+  .budget-submit {
+    background: transparent;
+    border: 0.1rem solid var(--mainGreen);
+    color: var(--mainGreen);
+  }
+  .expense-submit {
+    background: transparent;
+    border: 0.1rem solid var(--mainRed);
+    color: var(--mainRed);
+  }
+  .expense-submit:hover {
+    background: var(--mainRed);
+    color: var(--mainWhite);
+  }
+  .budget-submit:hover {
+    background: var(--mainGreen);
+    color: var(--mainDark);
+  }
+  
+  .budget-input {
+    border: 0.05rem solid var(--mainGreen) !important;
+  }
+  .expense-input {
+    border: 0.05rem solid var(--mainRed) !important;
+  }
+  .expense-amount,
+  .expense-title {
+    color: var(--mainRed);
+  }
+  .edit-icon {
+    color: var(--mainBlue);
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: none !important;
+  }
+  .delete-icon {
+    color: var(--mainRed);
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: none !important;
+  }
+  .edit-icon:hover {
+    color: var(--mainBlue);
+  }
+  .delete-icon:hover {
+    color: var(--mainRed);
+  }
+  .showItem {
+    display: block;
+  }
+  .info-title {
+    font-size: 1.5rem;
+  }
+  .budget {
+    font-size: 1.6rem;
+    color: var(--mainGreen);
+  }
+  .expense {
+    font-size: 1.6rem;
+    color: var(--mainRed);
+  }
+  .balance {
+    font-size: 1.6rem;
+  }
+  .budget-icon,
+  .expense-icon,
+  .balance-icon {
+    font-size: 2.5rem;
+    color: var(--mainBlue);
+  }
+  .showRed {
+    color: var(--mainRed);
+  }
+  .showGreen {
+    color: var(--mainGreen);
+  }
+  .showBlack {
+    color: var(--mainDark);
+  }
+  @media screen and (min-width: 992px) {
+    .budget {
+      font-size: 2.6rem;
+      color: var(--mainGreen);
+    }
+    .expense {
+      font-size: 2.6rem;
+      color: var(--mainRed);
+    }
+    .balance {
+      font-size: 2.6rem;
+    }
+    .budget-icon,
+    .expense-icon,
+    .balance-icon {
+      font-size: 3.5rem;
+      color: var(--mainBlue);
+    }
+  }
+  .list-item {
+    flex: 0 0 33.33%;
+    text-align: center;
+  }
+  .expense-item {
+    height: 2rem;
+  }
