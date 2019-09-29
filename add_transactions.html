@@ -86,20 +86,3 @@
         
     </body>
 </html>
-<script>
-        var form = document.getElementById('transactions');
-        form.onsubmit = function(event) {
-            event.preventDefault();
-            console.log(form.thedate.value);
-            console.log(form.thetitle.value);
-            console.log(form.amount.value);
-            console.log(form.description.value);
-
-            if(thedate() || thetitle() || amount() || description()) {
-                alert("Please fill all the boxes");
-                return;
-            }
-
-            row++;
-        };
-    </script> 
